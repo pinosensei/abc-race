@@ -37,7 +37,12 @@
       <div class="settings-row">
         <label class="toggle">
           <input id="soundToggle" type="checkbox" checked />
-          <span>🔊 Sound</span>
+          <span>🔊 Sounds</span>
+        </label>
+
+        <label class="toggle">
+          <input id="musicToggle" type="checkbox" checked />
+          <span>🎵 Music</span>
         </label>
 
         <label class="toggle">
@@ -73,6 +78,10 @@
       </div>
 
       <div id="letterBoard" class="letter-board" aria-label="Alphabet game board"></div>
+
+      <div id="countdownOverlay" class="countdown-overlay hidden" aria-live="assertive">
+        <span id="countdownNumber">3</span>
+      </div>
     </section>
 
     <section id="resultScreen" class="screen result-screen hidden">
