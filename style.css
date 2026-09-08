@@ -16,7 +16,7 @@ html, body {
   min-height: 100%;
   background: var(--bg);
   color: var(--ink);
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Patrick Hand", "Comic Sans MS", "Comic Sans", cursive;
 }
 
 button, input { font: inherit; }
@@ -212,7 +212,7 @@ h1 {
   border: 0;
   background: transparent;
   color: var(--ink);
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-family: "Patrick Hand", "Comic Sans MS", "Comic Sans", cursive;
   font-size: clamp(46px, 6.3vw, 82px);
   line-height: 1;
   display: grid;
@@ -346,4 +346,31 @@ h1 {
   .letter-board { min-height: 650px; }
   .result-actions { flex-direction: column; }
   .start-btn.compact, .secondary-btn { width: 100%; }
+}
+
+
+/* V3: Force a single-storey handwritten lowercase "a" on all major game text. */
+h1,
+.subtitle,
+.mode-btn,
+.mode-sample,
+.mode-label,
+.start-btn,
+.small-btn,
+.secondary-btn,
+.toggle,
+.timer-wrap,
+.progress-wrap,
+.instruction,
+#targetLetter,
+.letter,
+.result-card,
+.final-time,
+.best-box {
+  font-family: "Patrick Hand", "Comic Sans MS", "Comic Sans", cursive;
+}
+
+/* The alphabet buttons are extra-bold so the letters stay clear on classroom screens. */
+.letter {
+  font-weight: 700;
 }
