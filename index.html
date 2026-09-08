@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#ffffff" />
+  <title>ABC Race</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="app">
+    <section id="menuScreen" class="screen menu-screen">
+      <div class="title-wrap">
+        <div class="flag" aria-hidden="true">🏁</div>
+        <h1>ABC Race!</h1>
+      </div>
+
+      <p class="subtitle">Click the alphabet in order as fast as you can!</p>
+
+      <div class="mode-grid" role="group" aria-label="Letter mode">
+        <button class="mode-btn active" data-mode="lowercase" type="button">
+          <span class="mode-sample">abcd</span>
+          <span class="mode-label">lowercase</span>
+        </button>
+
+        <button class="mode-btn" data-mode="uppercase" type="button">
+          <span class="mode-sample">ABCD</span>
+          <span class="mode-label">uppercase</span>
+        </button>
+
+        <button class="mode-btn" data-mode="random" type="button">
+          <span class="mode-sample">aBCd</span>
+          <span class="mode-label">random</span>
+        </button>
+      </div>
+
+      <div class="settings-row">
+        <label class="toggle">
+          <input id="soundToggle" type="checkbox" checked />
+          <span>🔊 Sound</span>
+        </label>
+
+        <label class="toggle">
+          <input id="wrongPenaltyToggle" type="checkbox" />
+          <span>+0.5s wrong-click penalty</span>
+        </label>
+      </div>
+
+      <button id="startBtn" class="start-btn" type="button">Start!</button>
+
+      <div class="best-box">
+        <span>🏆 Best Time</span>
+        <strong id="menuBest">--:--.--</strong>
+      </div>
+    </section>
+
+    <section id="gameScreen" class="screen game-screen hidden">
+      <header class="game-topbar">
+        <button id="backBtn" class="small-btn" type="button">← Back</button>
+
+        <div class="timer-wrap" aria-live="polite">
+          <span class="timer-icon">⏱</span>
+          <span id="timer">00:00.00</span>
+        </div>
+
+        <div class="progress-wrap">
+          <span id="progressText">1 / 26</span>
+        </div>
+      </header>
+
+      <div class="instruction">
+        Find: <strong id="targetLetter">a</strong>
+      </div>
+
+      <div id="letterBoard" class="letter-board" aria-label="Alphabet game board"></div>
+    </section>
+
+    <section id="resultScreen" class="screen result-screen hidden">
+      <div class="result-card">
+        <div class="result-emoji">🎉</div>
+        <h2>Finished!</h2>
+        <p class="result-label">Your Time</p>
+        <div id="finalTime" class="final-time">00:00.00</div>
+
+        <div id="newBest" class="new-best hidden">🏆 New Best Time!</div>
+
+        <div class="result-stats">
+          <div>
+            <span>Mode</span>
+            <strong id="resultMode">lowercase</strong>
+          </div>
+          <div>
+            <span>Best</span>
+            <strong id="resultBest">--:--.--</strong>
+          </div>
+        </div>
+
+        <div class="result-actions">
+          <button id="playAgainBtn" class="start-btn compact" type="button">Play Again</button>
+          <button id="homeBtn" class="secondary-btn" type="button">Home</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
