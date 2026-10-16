@@ -374,3 +374,35 @@ h1,
 .letter {
   font-weight: 700;
 }
+
+
+/* Chromebook / short-screen responsive game layout */
+@media (min-width: 761px) and (max-height: 850px) {
+  .app { padding: 10px; }
+  .game-screen {
+    height: calc(100dvh - 20px);
+    min-height: 0;
+    padding: 12px 16px;
+  }
+  .game-topbar { padding-bottom: 7px; gap: 8px; }
+  .timer-wrap { font-size: clamp(28px, 4vh, 44px); }
+  .small-btn { padding: 5px 10px; }
+  .progress-wrap { padding: 6px 10px; }
+  .instruction { margin: 6px 0 2px; font-size: 18px; }
+  #targetLetter { font-size: 1.3em; }
+  .letter-board { min-height: 0; flex: 1 1 0; }
+  .letter {
+    width: clamp(38px, 7vh, 64px);
+    height: clamp(38px, 7vh, 64px);
+    font-size: clamp(32px, 6vh, 56px);
+  }
+}
+
+@media (max-width: 760px) and (orientation: landscape) {
+  .app { padding: 6px; }
+  .game-screen { height: calc(100dvh - 12px); min-height: 0; padding: 8px; }
+  .game-topbar { padding-bottom: 4px; }
+  .instruction { margin: 3px 0; font-size: 17px; }
+  .letter-board { min-height: 0; flex: 1 1 0; }
+  .letter { width: clamp(30px, 8vh, 52px); height: clamp(30px, 8vh, 52px); font-size: clamp(26px, 7vh, 46px); }
+}
