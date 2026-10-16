@@ -406,3 +406,24 @@ h1,
   .letter-board { min-height: 0; flex: 1 1 0; }
   .letter { width: clamp(30px, 8vh, 52px); height: clamp(30px, 8vh, 52px); font-size: clamp(26px, 7vh, 46px); }
 }
+
+/* V5: Larger, clearer letters while retaining the Chromebook fit. */
+.letter {
+  font-size: clamp(56px, 8.4vw, 104px);
+  width: clamp(64px, 8vw, 104px);
+  height: clamp(64px, 8vw, 104px);
+}
+@media (min-width: 761px) and (max-height: 850px) {
+  .letter {
+    font-size: clamp(42px, 8vh, 72px);
+    width: clamp(48px, 9vh, 76px);
+    height: clamp(48px, 9vh, 76px);
+  }
+}
+@media (max-width: 760px) and (orientation: landscape) {
+  .letter {
+    font-size: clamp(34px, 9vh, 58px);
+    width: clamp(40px, 10vh, 64px);
+    height: clamp(40px, 10vh, 64px);
+  }
+}
